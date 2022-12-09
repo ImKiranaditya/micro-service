@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: ADDRESS-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/address-service
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
+server:
+  port: 8082
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+
